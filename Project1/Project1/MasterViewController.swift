@@ -25,10 +25,9 @@ class MasterViewController: UITableViewController {
         
         let items = fm.contentsOfDirectoryAtPath(path, error: nil)
         
-        for item in items as [String] {
+        for item in items as! [String] {
             
-            if item.hasPrefix["nssl"]
-            {
+            if item.hasPrefix("nssl") {
                 objects.append(item)
             }
         }
@@ -66,7 +65,7 @@ class MasterViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
 
         let object = objects[indexPath.row]
-        cell.textLabel!.text = object
+        cell.textLabel!.text = object as! String
         return cell
     }
 
