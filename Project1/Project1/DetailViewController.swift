@@ -1,8 +1,8 @@
 //
 //  DetailViewController.swift
-//  Project1
+//  project1
 //
-//  Created by Charnold on 04/08/2015.
+//  Created by Charnold on 24/08/2015.
 //  Copyright (c) 2015 Arnold. All rights reserved.
 //
 

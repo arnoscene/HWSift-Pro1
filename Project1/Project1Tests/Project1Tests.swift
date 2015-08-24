@@ -1,15 +1,15 @@
 //
-//  Project1Tests.swift
-//  Project1Tests
+//  project1Tests.swift
+//  project1Tests
 //
-//  Created by Charnold on 04/08/2015.
+//  Created by Charnold on 24/08/2015.
 //  Copyright (c) 2015 Arnold. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class Project1Tests: XCTestCase {
+class project1Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()
