@@ -13,6 +13,7 @@
 		F3CC63E91B8CAB0E002306E8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3CC63E81B8CAB0E002306E8 /* Images.xcassets */; };
 		F3CC63EC1B8CAB0E002306E8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3CC63EA1B8CAB0E002306E8 /* LaunchScreen.xib */; };
 		F3CC63F81B8CAB0E002306E8 /* Project2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CC63F71B8CAB0E002306E8 /* Project2Tests.swift */; };
+		F3DC81DC1B8DD7F9002AC740 /* Array+Shuffling.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC81DB1B8DD7F9002AC740 /* Array+Shuffling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		F3CC63F11B8CAB0E002306E8 /* Project2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Project2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CC63F61B8CAB0E002306E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3CC63F71B8CAB0E002306E8 /* Project2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project2Tests.swift; sourceTree = "<group>"; };
+		F3DC81DB1B8DD7F9002AC740 /* Array+Shuffling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Shuffling.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		F3CC63DE1B8CAB0E002306E8 /* Project2 */ = {
 			isa = PBXGroup;
 			children = (
+				F3DC81DB1B8DD7F9002AC740 /* Array+Shuffling.swift */,
 				F3CC63E11B8CAB0E002306E8 /* AppDelegate.swift */,
 				F3CC63E31B8CAB0E002306E8 /* ViewController.swift */,
 				F3CC63E51B8CAB0E002306E8 /* Main.storyboard */,
@@ -214,6 +217,7 @@
 			files = (
 				F3CC63E41B8CAB0E002306E8 /* ViewController.swift in Sources */,
 				F3CC63E21B8CAB0E002306E8 /* AppDelegate.swift in Sources */,
+				F3DC81DC1B8DD7F9002AC740 /* Array+Shuffling.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +413,7 @@
 				F3CC63FD1B8CAB0E002306E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F3CC63FE1B8CAB0E002306E8 /* Build configuration list for PBXNativeTarget "Project2Tests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				F3CC64001B8CAB0E002306E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
