@@ -25,16 +25,6 @@
                                     <action selector="buttonTapped1:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="n59-r5-bk2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VbI-Hm-JgJ">
-                                <rect key="frame" x="200" y="324" width="200" height="100"/>
-                                <state key="normal" image="france">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonTapped1:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FIy-04-Xdu"/>
-                                    <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="k9u-Ul-onF"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fv-eG-wPA">
                                 <rect key="frame" x="200" y="204" width="200" height="100"/>
                                 <state key="normal" image="germany">
@@ -42,6 +32,15 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonTapped1:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qyr-Rz-RLQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VbI-Hm-JgJ">
+                                <rect key="frame" x="200" y="324" width="200" height="100"/>
+                                <state key="normal" image="france">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped1:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FIy-04-Xdu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -57,7 +56,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="dRN-xi-b5e"/>
                     <connections>
-                        <outlet property="button1" destination="ped-EV-fOA" id="LW3-bh-tRE"/>
+                        <outlet property="button1" destination="ped-EV-fOA" id="I2w-Z2-iQJ"/>
                         <outlet property="button2" destination="8Fv-eG-wPA" id="YNt-XI-OvM"/>
                         <outlet property="button3" destination="VbI-Hm-JgJ" id="EpZ-HC-Y40"/>
                     </connections>

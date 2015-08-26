@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
             endingLineNumber = "55"
-            landmarkName = "buttonTapped1(_:)"
+            landmarkName = "buttonTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
