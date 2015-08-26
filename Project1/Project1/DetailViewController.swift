@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Arnold. All rights reserved.
 //
 
+import Social
 import UIKit
 
 class DetailViewController: UIViewController {
@@ -44,8 +45,17 @@ class DetailViewController: UIViewController {
     }
     
     func shareTapped(){
-        let activity = UIActivityViewController(activityItems: [detailImageView.image!], applicationActivities: [])
-        presentViewController(activity, animated: true, completion: nil)
+//        let activity = UIActivityViewController(activityItems: [detailImageView.image!], applicationActivities: [])
+//        presentViewController(activity, animated: true, completion: nil)
+        
+        let social = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+        social.setInitialText("Hello world, buy my app")
+        social.addImage(detailImageView.image!)
+        social.addURL(NSURL(string: "http://www.photolib.noaa.gov/nssl"))
+        presentViewController(social, animated: true, completion: nil)
+        
+//        let vc = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+//        vc.se
     }
     
     
