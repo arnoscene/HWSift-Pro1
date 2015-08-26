@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>EAFCE33E-CFA0-4D8C-9527-6C5E0C35CE5D</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>project1</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>D648F347A77E5908292C7A809C618636AEF655BC</key>
 		<string>https://github.com/arnoscene/HWSift-Pro1.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>project1/project1.xcodeproj/project.xcworkspace</string>
+	<string>project1/project1.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D648F347A77E5908292C7A809C618636AEF655BC</key>
