@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iUX-WX-kcE">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ped-EV-fOA">
+                                <rect key="frame" x="200" y="84" width="200" height="100"/>
+                                <state key="normal" image="estonia">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VbI-Hm-JgJ">
+                                <rect key="frame" x="200" y="324" width="200" height="100"/>
+                                <state key="normal" image="france">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fv-eG-wPA">
+                                <rect key="frame" x="200" y="204" width="200" height="100"/>
+                                <state key="normal" image="germany">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="ped-EV-fOA" secondAttribute="centerX" id="EpB-pI-zih"/>
+                            <constraint firstItem="VbI-Hm-JgJ" firstAttribute="centerX" secondItem="8Fv-eG-wPA" secondAttribute="centerX" id="RbJ-8K-dxV"/>
+                            <constraint firstItem="8Fv-eG-wPA" firstAttribute="top" secondItem="ped-EV-fOA" secondAttribute="bottom" constant="20" id="f8h-xQ-Bbb"/>
+                            <constraint firstItem="8Fv-eG-wPA" firstAttribute="centerX" secondItem="ped-EV-fOA" secondAttribute="centerX" id="fO4-4f-fwe"/>
+                            <constraint firstItem="VbI-Hm-JgJ" firstAttribute="top" secondItem="8Fv-eG-wPA" secondAttribute="bottom" constant="20" id="kV4-kC-I8i"/>
+                            <constraint firstItem="ped-EV-fOA" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="zcW-QD-4rV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dRN-xi-b5e"/>
+                    <connections>
+                        <outlet property="button1" destination="ped-EV-fOA" id="LW3-bh-tRE"/>
+                        <outlet property="button2" destination="8Fv-eG-wPA" id="YNt-XI-OvM"/>
+                        <outlet property="button3" destination="VbI-Hm-JgJ" id="EpZ-HC-Y40"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1632" y="464"/>
+        </scene>
+        <!--Flag Game-->
+        <scene sceneID="pfr-VC-J7a">
+            <objects>
+                <navigationController title="Flag Game" automaticallyAdjustsScrollViewInsets="NO" id="iUX-WX-kcE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AVr-4m-yMH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="fCH-xB-uwU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5kx-ZQ-6iF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="464"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="estonia" width="200" height="100"/>
+        <image name="france" width="200" height="100"/>
+        <image name="germany" width="200" height="100"/>
+    </resources>
+</document>
