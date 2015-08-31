@@ -24,9 +24,9 @@ class ViewController: UIViewController,WKNavigationDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-//        let url = NSURL(string: "http://www.appstorius.com")!
-//        webView.loadRequest(NSURLRequest(URL: url))
-//        webView.allowsBackForwardNavigationGestures = true
+        let url = NSURL(string: "http://www.appstorius.com")!
+        webView.loadRequest(NSURLRequest(URL: url))
+        webView.allowsBackForwardNavigationGestures = true
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Open", style: .Plain, target: self, action:"openTapped")
     }
@@ -50,6 +50,10 @@ class ViewController: UIViewController,WKNavigationDelegate {
         let url = NSURL(string: "http://" + action.title)!
         webView.loadRequest(NSURLRequest(URL: url))
         
+    }
+    
+    func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
+        title=webView.title
     }
 
 
