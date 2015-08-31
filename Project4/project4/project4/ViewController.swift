@@ -13,6 +13,7 @@ class ViewController: UIViewController,WKNavigationDelegate {
 
     var webView: WKWebView!
     var progressView: UIProgressView!
+    var websites = ["liveleak.com","appstorius.com"]
     
     override func loadView() {
         webView = WKWebView()
@@ -25,7 +26,7 @@ class ViewController: UIViewController,WKNavigationDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let url = NSURL(string: "http://www.appstorius.com")!
+        let url = NSURL(string: "http://"+websites[0])!
         webView.loadRequest(NSURLRequest(URL: url))
         webView.allowsBackForwardNavigationGestures = true
 
@@ -57,16 +58,20 @@ class ViewController: UIViewController,WKNavigationDelegate {
     
     func openTapped(){
         let ac = UIAlertController(title: "Open page", message: nil, preferredStyle: .ActionSheet)
-        ac.addAction(UIAlertAction(title: "apple.com", style: .Default, handler: openPage))
-            ac.addAction(UIAlertAction(title: "slashdot.org", style: .Default, handler: openPage))
-            ac.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        
+        for website in websites{
+            ac.addAction(UIAlertAction(title: website, style: .Default, handler: openPage))
+            
+        }
+        
+        ac.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         presentViewController(ac, animated: true, completion: nil)
 
     }
     
     override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>){
         
-        if keyPath == "estimatedProgress"{
+        if keyPath == "estimatedProgress"{0
             
             progressView.progress = Float(webView.estimatedProgress)
         
@@ -79,6 +84,21 @@ class ViewController: UIViewController,WKNavigationDelegate {
         let url = NSURL(string: "http://" + action.title)!
         webView.loadRequest(NSURLRequest(URL: url))
         
+    }
+    
+    func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction, decisionHandler: (WKNavigationActionPolicy) -> Void) {
+        let url = navigationAction.request.URL
+        
+        if let host = url?.host{
+            for website in websites{
+                if host.rangeOfString(website) != nil {
+                    decisionHandler(.Allow)
+                    return
+                }
+            }
+        }
+        
+        decisionHandler(.Cancel)
     }
     
     func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
