@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7EB083D5-C6F1-4ADE-832E-495BCD36A13E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Project5</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D648F347A77E5908292C7A809C618636AEF655BC</key>
+		<string>https://github.com/arnoscene/HWSift-Pro1.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>project5/Project5/Project5.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D648F347A77E5908292C7A809C618636AEF655BC</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/arnoscene/HWSift-Pro1.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D648F347A77E5908292C7A809C618636AEF655BC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D648F347A77E5908292C7A809C618636AEF655BC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>hacking%20with%20swift</string>
+		</dict>
+	</array>
+</dict>
+</plist>
