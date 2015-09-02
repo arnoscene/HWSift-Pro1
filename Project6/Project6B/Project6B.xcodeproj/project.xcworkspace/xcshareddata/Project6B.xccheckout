@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>2F6BD6EF-7D16-44C5-B712-82C362AA134F</string>
+	<string>F6ED0EE5-1998-4AE4-AFE0-BAAF8099F944</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Project2</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>D648F347A77E5908292C7A809C618636AEF655BC</key>
 		<string>https://github.com/arnoscene/HWSift-Pro1.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>project2/Project2/Project2.xcodeproj</string>
+	<string>Project6/Project6B/Project6B.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D648F347A77E5908292C7A809C618636AEF655BC</key>
