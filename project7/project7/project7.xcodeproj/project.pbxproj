@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F3E9EB2E1B98559100DF8763 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9EB2D1B98559100DF8763 /* SwiftyJSON.swift */; };
 		F3EBD9FF1B9723E500E1201D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EBD9FE1B9723E500E1201D /* AppDelegate.swift */; };
 		F3EBDA011B9723E500E1201D /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EBDA001B9723E500E1201D /* MasterViewController.swift */; };
 		F3EBDA031B9723E500E1201D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EBDA021B9723E500E1201D /* DetailViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F3E9EB2D1B98559100DF8763 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		F3EBD9F91B9723E500E1201D /* project7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EBD9FD1B9723E500E1201D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3EBD9FE1B9723E500E1201D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		F3EBD9FB1B9723E500E1201D /* project7 */ = {
 			isa = PBXGroup;
 			children = (
+				F3E9EB2D1B98559100DF8763 /* SwiftyJSON.swift */,
 				F3EBD9FE1B9723E500E1201D /* AppDelegate.swift */,
 				F3EBDA001B9723E500E1201D /* MasterViewController.swift */,
 				F3EBDA021B9723E500E1201D /* DetailViewController.swift */,
@@ -218,6 +221,7 @@
 				F3EBDA031B9723E500E1201D /* DetailViewController.swift in Sources */,
 				F3EBDA011B9723E500E1201D /* MasterViewController.swift in Sources */,
 				F3EBD9FF1B9723E500E1201D /* AppDelegate.swift in Sources */,
+				F3E9EB2E1B98559100DF8763 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +417,7 @@
 				F3EBDA1C1B9723E600E1201D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F3EBDA1D1B9723E600E1201D /* Build configuration list for PBXNativeTarget "project7Tests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				F3EBDA1F1B9723E600E1201D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
