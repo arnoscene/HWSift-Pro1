@@ -22,7 +22,7 @@ class MasterViewController: UITableViewController {
         var urlString: String
         
         if(navigationController?.tabBarItem.tag == 0){
-            urlString = "http://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/?key=C09D16E7C35B5FA1E3E9D1E2501987C5&steamid=76561198006950549&format=json"
+            urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
         }else{
             urlString = "https://api.whitehouse.gov/v1/petitions.json?signatureCountFloor=10000&limit=100"
 
@@ -32,12 +32,20 @@ class MasterViewController: UITableViewController {
         if let url = NSURL(string: urlString){
             if let data = NSData(contentsOfURL: url, options: .allZeros, error: nil){
                 let json = JSON(data: data)
-                 parseJSON(json["response"]["games"])
-               
+                
+                if json["metadata"]["responseInfo"]["status"].intValue == 200{
+                    
+                    parseJSON(json)
+                }else{
+                    showEorr()
+                }
             }else{
                 showEorr()
             }
+        }else{
+            showEorr()
         }
+        
     }
     
     func showEorr(){
@@ -49,11 +57,10 @@ class MasterViewController: UITableViewController {
     
     func parseJSON(json: JSON){
         
-        for result in json.arrayValue {
-        //["gid"].arrayValue{
-            let title = result["appid"].stringValue
-            let body = result["playtime_2weeks"].stringValue
-            let sigs = result["name"].stringValue
+        for result in json["results"].arrayValue{
+            let title = result["title"].stringValue
+            let body = result["body"].stringValue
+            let sigs = result["signatureCount"].stringValue
             
             let dict = ["title": title , "body": body, "sigs": sigs]
             objects.append(dict)
