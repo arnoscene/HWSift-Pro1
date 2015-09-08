@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
              
     @IBOutlet weak var cluesLabel: UILabel!
@@ -19,7 +20,11 @@ class ViewController: UIViewController {
     var activatedButtons = [UIButton]()
     var solutions = [String]()
     
-    var score = 0
+    var score = 0 {
+        didSet{
+            scoreLabel.text = "Score: \(score)"
+        }
+    }
     var level = 1
 
     override func viewDidLoad() {
@@ -98,8 +103,38 @@ class ViewController: UIViewController {
     }
 
     @IBAction func submitTapped(sender: UIButton) {
+        if let solutionPosition = find(solutions, currentAnswer.text){
+            activatedButtons.removeAll()
+            
+            var splitClues = answersLabel.text!.componentsSeparatedByString("\n")
+            splitClues[solutionPosition] = currentAnswer.text
+            answersLabel.text = join("\n", splitClues)
+            
+            currentAnswer.text = ""
+            ++score
+            
+            if score % 7 == 0 {
+               let ac = UIAlertController(title: "Well done!", message: "Are you ready for the next level?", preferredStyle: .Alert)
+                ac.addAction(UIAlertAction(title: "Fuck", style: .Default,handler: levelUp))
+                presentViewController(ac, animated: true, completion: nil)
+                
+            }
+            
+            
+        }
+        
+    }
+    
+    func levelUp(action: UIAlertAction!){
+        ++level
+        
+        solutions.removeAll(keepCapacity: true)
+        loadLevel()
         
         
+        for btn in letterButtons{
+            btn.hidden = false
+        }
     }
 
     @IBAction func clearTapped(sender: UIButton) {
