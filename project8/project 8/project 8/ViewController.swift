@@ -9,17 +9,106 @@
 import UIKit
 
 class ViewController: UIViewController {
+             
+    @IBOutlet weak var cluesLabel: UILabel!
+    @IBOutlet weak var answersLabel: UILabel!
+    @IBOutlet weak var currentAnswer: UITextField!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    var letterButtons = [UIButton]()
+    var activatedButtons = [UIButton]()
+    var solutions = [String]()
+    
+    var score = 0
+    var level = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        for subview in view.subviews{
+            if subview.tag == 1001{
+                let btn = subview as! UIButton
+                letterButtons.append(btn)
+                
+                btn.addTarget(self, action: "letterTapped:", forControlEvents: .TouchUpInside)
+            }
+        }
+        
+        loadLevel()
+        
     }
-
+    
+    func loadLevel(){
+        
+        var cluesString = ""
+        var soltionString = ""
+        var letterBits = [String]()
+        
+        if let levelFilePath = NSBundle.mainBundle().pathForResource("level\(level)", ofType: "txt"){
+            if let levelContents = NSString(contentsOfFile: levelFilePath, usedEncoding: nil, error: nil){
+                var lines = levelContents.componentsSeparatedByString("\n")
+                lines.shuffle()
+                
+                for (index, line) in enumerate(lines as! [String]){
+                    let parts = line.componentsSeparatedByString(": ")
+                    let answer = parts[0]
+                    let clue = parts[1]
+                    
+                    cluesString += "\(index + 1). \(clue)\n"
+                    
+                    let solutionWord = answer.stringByReplacingOccurrencesOfString("|", withString: "")
+                    
+                    solutions.append(solutionWord)
+                    
+                    soltionString += "\(count(solutionWord)) letters\n"
+                    
+                    let bits = answer.componentsSeparatedByString("|")
+                    letterBits += bits
+                }
+            }
+        }
+        
+        cluesLabel.text = cluesString.stringByTrimmingCharactersInSet(.whitespaceAndNewlineCharacterSet())
+        answersLabel.text = soltionString.stringByTrimmingCharactersInSet(.whitespaceAndNewlineCharacterSet())
+        
+        letterBits.shuffle()
+        letterButtons.shuffle()
+        
+        if letterBits.count == letterBits.count{
+            for i in 0 ..< letterBits.count{
+                letterButtons[i].setTitle(letterBits[i], forState: .Normal)
+            }
+        }
+        
+        
+    }
+    
+    func letterTapped(btn: UIButton){
+        
+        currentAnswer.text = currentAnswer.text + btn.titleLabel!.text!
+        activatedButtons.append(btn)
+        btn.hidden = true
+        
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func submitTapped(sender: UIButton) {
+        
+        
+    }
 
+    @IBAction func clearTapped(sender: UIButton) {
+        currentAnswer.text = ""
+        for btn in activatedButtons{
+            btn.hidden = false
+        }
+        
+        activatedButtons.removeAll()
+    }
 }
 

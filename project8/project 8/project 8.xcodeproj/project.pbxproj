@@ -13,6 +13,9 @@
 		F3AA7EA31B9DF31800227E55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3AA7EA21B9DF31800227E55 /* Images.xcassets */; };
 		F3AA7EA61B9DF31800227E55 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3AA7EA41B9DF31800227E55 /* LaunchScreen.xib */; };
 		F3AA7EB21B9DF31800227E55 /* project_8Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AA7EB11B9DF31800227E55 /* project_8Tests.swift */; };
+		F3DBE3471B9EF1CB0070E0E5 /* Array+Shuffling.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DBE3431B9EF1CB0070E0E5 /* Array+Shuffling.swift */; };
+		F3DBE3481B9EF1CB0070E0E5 /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = F3DBE3451B9EF1CB0070E0E5 /* level1.txt */; };
+		F3DBE3491B9EF1CB0070E0E5 /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = F3DBE3461B9EF1CB0070E0E5 /* level2.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		F3AA7EAB1B9DF31800227E55 /* project 8Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "project 8Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AA7EB01B9DF31800227E55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3AA7EB11B9DF31800227E55 /* project_8Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = project_8Tests.swift; sourceTree = "<group>"; };
+		F3DBE3431B9EF1CB0070E0E5 /* Array+Shuffling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Shuffling.swift"; sourceTree = "<group>"; };
+		F3DBE3451B9EF1CB0070E0E5 /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = level1.txt; path = Content/level1.txt; sourceTree = "<group>"; };
+		F3DBE3461B9EF1CB0070E0E5 /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = level2.txt; path = Content/level2.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,9 @@
 		F3AA7E981B9DF31700227E55 /* project 8 */ = {
 			isa = PBXGroup;
 			children = (
+				F3DBE3461B9EF1CB0070E0E5 /* level2.txt */,
+				F3DBE3451B9EF1CB0070E0E5 /* level1.txt */,
+				F3DBE3431B9EF1CB0070E0E5 /* Array+Shuffling.swift */,
 				F3AA7E9B1B9DF31800227E55 /* AppDelegate.swift */,
 				F3AA7E9D1B9DF31800227E55 /* ViewController.swift */,
 				F3AA7E9F1B9DF31800227E55 /* Main.storyboard */,
@@ -192,7 +201,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3DBE3491B9EF1CB0070E0E5 /* level2.txt in Resources */,
 				F3AA7EA11B9DF31800227E55 /* Main.storyboard in Resources */,
+				F3DBE3481B9EF1CB0070E0E5 /* level1.txt in Resources */,
 				F3AA7EA61B9DF31800227E55 /* LaunchScreen.xib in Resources */,
 				F3AA7EA31B9DF31800227E55 /* Images.xcassets in Resources */,
 			);
@@ -214,6 +225,7 @@
 			files = (
 				F3AA7E9E1B9DF31800227E55 /* ViewController.swift in Sources */,
 				F3AA7E9C1B9DF31800227E55 /* AppDelegate.swift in Sources */,
+				F3DBE3471B9EF1CB0070E0E5 /* Array+Shuffling.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +423,7 @@
 				F3AA7EB71B9DF31800227E55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F3AA7EB81B9DF31800227E55 /* Build configuration list for PBXNativeTarget "project 8Tests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +432,7 @@
 				F3AA7EBA1B9DF31800227E55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
