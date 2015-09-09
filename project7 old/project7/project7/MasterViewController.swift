@@ -27,32 +27,37 @@ class MasterViewController: UITableViewController {
             urlString = "https://api.whitehouse.gov/v1/petitions.json?signatureCountFloor=10000&limit=100"
 
         }
-
-        
-        if let url = NSURL(string: urlString){
-            if let data = NSData(contentsOfURL: url, options: .allZeros, error: nil){
-                let json = JSON(data: data)
+     
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) { [unowned self] in
+            
+            if let url = NSURL(string: urlString){
                 
-                if json["metadata"]["responseInfo"]["status"].intValue == 200{
+                if let data = NSData(contentsOfURL: url, options: .allZeros, error: nil){
                     
-                    parseJSON(json)
+                    let json = JSON(data: data)
+                    
+                    if json["metadata"]["responseInfo"]["status"].intValue == 200 {
+                        
+                        self.parseJSON(json)
+                    }else{
+                        self.showEorr()
+                    }
                 }else{
-                    showEorr()
+                    self.showEorr()
                 }
             }else{
-                showEorr()
+                self.showEorr()
             }
-        }else{
-            showEorr()
         }
         
     }
     
     func showEorr(){
+        dispatch_async(dispatch_get_main_queue()) { [unowned self] in
         let ac = UIAlertController(title: "Error", message: "Soemthing broke you need to go back and code it", preferredStyle: .Alert)
         ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-        presentViewController(ac, animated: true, completion: nil)
-        
+        self.presentViewController(ac, animated: true, completion: nil)
+        }
     }
     
     func parseJSON(json: JSON){
@@ -66,8 +71,9 @@ class MasterViewController: UITableViewController {
             objects.append(dict)
 
         }
-        
-        tableView.reloadData()
+        dispatch_async(dispatch_get_main_queue()) { [unowned self] in
+        self.tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
